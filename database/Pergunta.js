@@ -19,3 +19,5 @@ const Pergunta = connection.define('perguntas', {
 //o force significa que ele não vai forçar a criação da tabela caso ela exista, ou seja ele não vai recriar a tabela
 //o then é executado quando a tabela é criada
 Pergunta.sync({force: false}).then(() => {});
+
+module.exports = Pergunta;

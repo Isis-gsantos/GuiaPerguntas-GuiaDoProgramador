@@ -3,7 +3,7 @@
 <body>
     <%- include('partials/navbar.ejs') %>
     
-    <div class="container">
+    <section class="container">
         <hr>
         <h1>Perguntas</h1>
         <hr>
@@ -12,20 +12,19 @@
 
         <% perguntas.forEach(pergunta => { %>
             <br>
-            <div class="card">
+            <article class="card">
                 <div class="card-body">
                     <h3><%= pergunta.titulo %></h3>
                 </div>
 
                 <div class="card-footer">
                     <a href="/pergunta/<%= pergunta.id %>">
-                        <!-- dessa forma eu consigo pegar o id de cada pergunta e colocando junto ao link do botão de cada pergunta. Então toda pergunta vai ter seu próprio link com seu próprio id -->
                         <button class="btn btn-primary">Responder</button>
                     </a>
                 </div>
-            </div>
+            </article>
         <% }) %>
-    </div>
+    </section>
 </body>
 
 <%- include('partials/footer.ejs') %>
